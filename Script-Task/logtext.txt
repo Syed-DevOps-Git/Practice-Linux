@@ -1,0 +1,34 @@
+#! /bin/bash
+#
+#
+#Define varriables at the top
+LOG_DIR="/home/administrator/logs"
+#APP_LOG_FILE="application.log"
+#SYS_LOG_FILE="system.log"
+
+ERROR_PATTERNS=("ERROR" "CRITICAL" "FATAL")
+
+
+echo "#### analysing logs####"
+
+
+echo -e "\n####List of log files update last 24 hours###"
+LOG_FILES=$(find "$LOG_DIR" -name "*.log" -mtime -1)
+echo -e "\n $LOG_FILES"
+
+#Loop through each log file
+for LOG_FILE in $LOG_FILES; do
+echo "=======$LOG_FILE========"
+echo "================"
+   
+    for PATTERN in ${ERROR_PATTERNS[@]}; do
+
+
+echo -e "\n###Searching $PATTERN logs in $LOG_FILE logs###"
+grep "$PATTERN" "$LOG_FILE"
+echo -e "\n###Number of $PATTERN logs in $LOG_FILE log###"
+grep -c "$PATTERN" ""$LOG_FILE""
+
+    done
+
+done

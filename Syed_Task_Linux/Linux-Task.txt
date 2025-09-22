@@ -1,0 +1,43 @@
+Basic Linux command
+
+Whoami -root or gust
+Ls -list
+Ls -l – list of details
+Ls -a – hidden details
+Ls -s – file size
+Ls -sh  -file size human count
+Mkdir -folder create
+Pwd – current path
+Cd & cd.. – change direction
+Touch- file create
+Cat - file inside see
+Head – first 5line inside file show for open space
+Tail- last 5 line inside file show for open sapce
+Vi & vim – write to inside file
+Cp – copy filename
+Mv -move to file & path
+Rm -remove
+Rm -f - forcefully
+File inside 3 mode
+I – edit & write
+Esp – backspace
+:wq – save &quite
+:wq! – forcefully
+:yy -copy
+:p-pate
+:dd-deleted
+:set nu & set nonu – number line file
+:/s -text highlight
+Top – taskmanager
+Kill -9 – application closed
+Lsblk & df -h – disk partition
+Permission
+R -read -4
+w-write -2
+x-excute-1
+chmod – chmod userid filename
+zip,tar,gzip
+
+
+
+
